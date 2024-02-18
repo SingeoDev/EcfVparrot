@@ -17,10 +17,10 @@
 {% block body %}
 <div class="col-12">
 
-<div class="row justify-content-center">
+<div class="row m-0 justify-content-center">
 	<div class="imgPrincipal ">
 		<div class="imageview border border-black border-3 rounded-1">
-			<div class="col-12 align-self-center p-1 viewimage rounded-1" style="background-image: url('{{ asset('images/imagesVehicles/' ~ vehicle.imageName) }}')">
+			<div class="col-12 align-self-center viewimage rounded-1" style="background-image: url('{{ asset('images/imagesVehicles/' ~ vehicle.imageName) }}')">
 				<div class="viewImgClick " data-bs-toggle="modal" data-bs-target="#viewImgPrincipal"></div>
 			</div>
 		</div>
@@ -28,7 +28,7 @@
 </div>
 
 
-	<div class="row justify-content-center">
+	<div class="row m-0 justify-content-center">
 	{% for imgGall in vehicle.imageGalleries %}
 
 	<div class="img">
