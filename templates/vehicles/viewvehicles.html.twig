@@ -1,0 +1,55 @@
+{# LA VUE DES VEHICULES DANS LA PAGE NOS VEHICULES #}
+
+{% if vehicles|length == 0 %}
+
+<div class="row justify-content-center mt-5">
+    <div class="col-10 mt-3 mb-3 border border-3 border-black bgNoVehicles">
+		<div class=" text-center rounded-1">
+			
+			<p class="fs-3">Il n'y a pas de Vehicules disponibles pour le moment</p>
+			
+			<p class="fs-4"><B>Veuillez nous contacter pour plus d'informations</B></p>
+
+		</div>
+	</div>
+</div>
+	
+{% else %}
+
+	{% for vehicle in vehicles %}
+
+		<div class="col-12 col-lg-4 p-3 mt-5 cardSpace mb-4">
+			<div class="card">
+			
+				<div class="imgTop border border-black border-3">
+				
+					<div class="viewImage" style="background-image: url('{{ asset('images/imagesVehicles/' ~ vehicle.imageName) }}')">
+						
+				</div>
+					
+			</div>
+			
+
+				<div class="card-body border border-black border-3 position-relative">
+
+					<h6 class="card-title fw-bold fs-6 text-uppercase">{{ vehicle.name }}</h6>
+					
+					<p class="card-text fs-6 m-0 p-0 ">Année &nbsp;{{ vehicle.years|date("Y") }}</p>
+
+					<p class="card-text fs-6 m-0 p-0">{{ vehicle.mileage }} Km</p>
+
+					<p class="card-text fs-6 m-0 p-0">{{ vehicle.fuel }}</p>
+					
+				    <p class="card-text fw-bold fs-5 textcolorPrice">PRIX : {{ vehicle.price }} €</p>
+					
+                    <div class="position-absolute top-100 start-50 translate-middle">
+				        <a class="btnCustom border border-3 border-black fw-bold" href="{{ path('app_vehicle_view', {'id': vehicle.id}) }}">VOIR</a>
+			        </div> 
+
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+{% endif %}
+
+

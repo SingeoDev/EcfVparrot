@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Acceuil V.Parrot{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/services.css') }}">
+{% endblock %}
+
+{% block body %}
+<br>
+	<div class="row justify-content-center m-0">
+		<div class="col-12 align-self-center border border-2 border-black banniere">
+			<div class="row justify-content-center">
+				
+				<img class="imagebanniere" src="{{ asset('images/banniere.jpg' )}}">
+
+			</div>
+		</div>
+	</div>
+
+    
+
+    <div id="content" class="row justify-content-evenly mb-4 ms-0 me-0">
+        {% include 'home/viewservices.html.twig' %}
+    </div>
+    
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{{ form_start(form, {'attr': {'id': 'contactAboutForm'} }) }}
+<div class="container-fluid text-center border border-3 border-black contactColor">
+
+	<button type="button" class="btn btnCancel border border-3 border-black closeContactAbout" data-bs-dismiss="modal" aria-label="Close">
+		<img src="{{ asset('images/cross.png') }}" alt="close" class="close cursor-pointer" width="40px" height="40px">
+	</button>
+
+	{{ form_row(form.aboutvehicle, {'value': vehicle.name, 'label_attr': {'class': 'me-2'}}) }}
+	<br>
+	{{ form_row(form.firstName, {'label_attr': {'class': 'me-2'}}) }}
+	<br>
+	{{ form_row(form.lastName, {'label_attr': {'class': 'me-2'}}) }}
+	<br>
+	{{ form_row(form.email, {'label_attr': {'class': 'me-2'}}) }}
+	<br>
+	{{ form_row(form.phone, {'label_attr': {'class': 'me-2'}}) }}
+	<br>
+	{{ form_row(form.message, {'label_attr': {'class': 'me-2'}}) }}
+	<br>
+
+	<div class="form-check mt-4">
+		<input type="checkbox" class="form-check-input" id="terms" name="terms" required>
+		<label class="form-check-label" for="terms">
+			Accepter la politique de confidentialité.
+			<a class="knowMore" href="{{path('app_privacy_policy')}}">En savoir plus</a>
+		</label>
+	</div>
+	
+</div>
+<br>
+
+<button type="reset" class="btn btnCancel border border-3 border-black mt-3 mb-2 ms-3 mt-3 mb-2">Annuler</button>
+
+<button type="submit" class="btn fs-3 border border-3 border-black mt-3 mb-2 submitContact" style="color: #002BC6;">ENVOYER</button>
+
+{{ form_end(form) }}
+

@@ -1,0 +1,97 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos Vehicules{% endblock %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="{{ asset('css/vehicles.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script> {# POUR SLIDER MOBILE #}
+{% endblock %}
+
+
+{% block body %}
+
+
+{# LES SLIDER DANS LA PAGE NOS VEHICULES #}
+
+<div class="row m-0">
+	<div class="col-12 col-lg-4 align-self-center">
+
+           <p class="text-center">
+              <label class="textSlider" for="amountPrix"><B>Prix</B></label>
+              <input type="text" id="amountPrix" class="amountPrix" readonly style="border:5; color:#002BC6; font-weight:bold; max-width: 180px">
+           </p>
+ 
+           <div id="slider-range-prix" class="slider-range-prix align-self-center"> </div>
+
+           <div id="restartPrix" class="text-end mt-2 pe-5">
+				        <a class="btn border border-3 border-black fsReinit"><B>Réinitialiser</B></a>
+		   </div> 
+
+
+    </div>
+
+ 
+
+
+    <div class="col-12 col-lg-4 text-black">
+
+           <p class="text-center">
+               <label class="textSlider" for="amountKm"><B>Km</B></label>
+               <input type="text" id="amountKm" class="amountKm" readonly style="border:5; color:#002BC6; font-weight:bold; max-width: 180px">
+           </p>
+ 
+           <div id="slider-range-km" class="slider-range-km"> </div>
+
+		     <div id="restartKm" class="text-end mt-2 pe-5">
+				        <a class="btn border border-3 border-black fsReinit"><B>Réinitialiser</B></a>
+		     </div> 
+
+
+    </div>
+
+
+    <div class="col-12 col-lg-4 text-black">
+
+           <p class="text-center">
+               <label class="textSlider" for="amountAnnee"><B>Année</B></label>
+               <input type="text" id="amountAnnee" class="amountAnnee" readonly style="border:5; color:#002BC6; font-weight:bold; max-width: 180px">
+           </p>
+ 
+           <div id="slider-range-annee" class="slider-range-annee"> </div>
+
+		      <div id="restartAnnee" class="text-end mt-2 pe-5">
+				        <a class="btn border border-3 border-black fsReinit"> <B>Réinitialiser</B></a>
+			  </div> 
+
+    </div>
+
+</div>
+
+
+
+	<div class="row m-0">
+		<div class="col-12">
+			<div class="row mb-4" id="content"> 
+				{% include 'vehicles/viewvehicles.html.twig' %}
+			</div>
+		</div>
+	</div>
+
+	<script>
+    	let valueMinPrice = {{ valueMinPrice }};
+		let valueMaxPrice = {{ valueMaxPrice }};
+		let valueMinKm = {{ valueMinKm }};
+		let valueMaxKm = {{ valueMaxKm }};
+		let valueMinYear = {{ valueMinYear }};
+		let valueMaxYear = {{ valueMaxYear }};
+	</script>
+	<script src="{{ asset('js/vehicles.js') }}"></script>
+	
+
+{% endblock %}

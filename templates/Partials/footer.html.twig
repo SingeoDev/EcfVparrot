@@ -1,0 +1,333 @@
+<footer class="container-fluid text-center footer">
+	<div class="row m-0">
+		<div class="col-12 col-lg-4 horaires">
+
+			<h4 class="fs-3 text-black">Horaires d'ouverture</h4>
+
+			{% if openDay.getOpenDay is null %}
+
+				<p class="text-black fs-4 fw-bold">Pas d'horaires</p>
+
+			{% else %}
+
+
+
+		<table class="fs-6 table table-sm tableOpenDay">
+			
+			            {# LUNDI MATIN#}
+
+						<tr class="">
+					
+							<th>Lundi :</th>
+
+						<td>
+
+                        {% if openDay.getOpenDay.mondayAmBegin is not null %}
+
+								 {{ openDay.getOpenDay.mondayAmBegin|date("H:i")}} - {{ openDay.getOpenDay.mondayAmFinish|date("H:i")}}
+
+                            {% else %}
+
+                                Fermé
+
+                            {% endif %}
+
+				        </td> 
+
+						
+						{# LUNDI APRES-MIDI#}
+
+						<td>
+
+						{% if openDay.getOpenDay.mondayPmBegin is not null %}
+
+								 {{ openDay.getOpenDay.mondayPmBegin|date("H:i")}} - {{ openDay.getOpenDay.mondayPmFinish|date("H:i")}}
+
+                            {% else %}
+
+                                Fermé
+
+                            {% endif %}
+
+                        </td> 
+
+				        </tr>
+
+
+					    {# MARDI MATIN#}
+
+						<tr class="">
+					
+							<th>Mardi :</th>
+
+						<td>
+
+						{% if openDay.getOpenDay.tuesdayAmBegin is not null %}
+
+						       {{ openDay.getOpenDay.tuesdayAmBegin|date("H:i")}} - {{ openDay.getOpenDay.tuesdayAmFinish|date("H:i")}}
+
+                            {% else %}
+
+                                Fermé
+
+                            {% endif %}
+
+				        </td> 
+
+
+						{# MARDI APRES-MIDI#}
+
+						<td>
+
+						{% if openDay.getOpenDay.tuesdayPmBegin is not null %}
+
+							    {{ openDay.getOpenDay.tuesdayPmBegin|date("H:i")}} - {{ openDay.getOpenDay.tuesdayPmFinish|date("H:i")}}
+
+                            {% else %}
+
+                                Fermé
+
+                            {% endif %}
+
+                        </td> 
+							
+				        </tr>
+
+
+						{# MERCREDI MATIN#}
+
+                        <tr class="">
+					
+							<th>Mercredi :</th>
+
+							<td>
+
+                        {% if openDay.getOpenDay.wednesdayAmBegin is not null %}
+
+								 {{ openDay.getOpenDay.wednesdayAmBegin|date("H:i")}} - {{ openDay.getOpenDay.wednesdayAmFinish|date("H:i")}}
+
+                            {% else %}
+
+                                Fermé
+
+                            {% endif %}
+
+				        </td>
+
+						<td>
+
+						{% if openDay.getOpenDay.wednesdayPmBegin is not null %}
+
+								 {{ openDay.getOpenDay.wednesdayPmBegin|date("H:i")}} - {{ openDay.getOpenDay.wednesdayPmFinish|date("H:i")}}
+
+                            {% else %}
+
+                                Fermé
+
+                            {% endif %}
+
+                            </td> 
+
+				        </tr>
+
+
+					   {# JEUDI MATIN#}
+					
+						<tr class="">
+					
+							<th>Jeudi :</th>
+
+							<td>
+
+						{% if openDay.getOpenDay.thursdayAmBegin is not null %}
+
+						       {{ openDay.getOpenDay.thursdayAmBegin|date("H:i")}} - {{ openDay.getOpenDay.thursdayAmFinish|date("H:i")}}
+
+                            {% else %}
+
+                                Fermé
+
+                            {% endif %}
+
+				            </td> 
+
+
+							{# JEUDI APRES-MIDI#}
+
+							<td>
+
+						{% if openDay.getOpenDay.thursdayPmBegin is not null %}
+
+							    {{ openDay.getOpenDay.thursdayPmBegin|date("H:i")}} - {{ openDay.getOpenDay.thursdayPmFinish|date("H:i")}}
+
+                            {% else %}
+
+                                Fermé
+
+                            {% endif %}
+
+                            </td> 
+							
+				        </tr>
+
+
+						{# VENDREDI MATIN#}
+
+						<tr class="">
+																			
+							<th>Vendredi :</th>
+
+							<td>
+
+						{% if openDay.getOpenDay.fridayAmBegin is not null %}
+
+								 {{ openDay.getOpenDay.fridayAmBegin|date("H:i")}} - {{ openDay.getOpenDay.fridayAmFinish|date("H:i")}}
+
+							{% else %}
+
+								Fermé
+
+							{% endif %}
+
+				        </td>												
+
+
+						{# VENDREDI APRES-MIDI#}
+
+						<td>
+
+						{% if openDay.getOpenDay.fridayPmBegin is not null %}
+
+								 {{ openDay.getOpenDay.fridayPmBegin|date("H:i")}} - {{ openDay.getOpenDay.fridayPmFinish|date("H:i")}}
+
+							{% else %}
+
+								Fermé
+
+							{% endif %}
+
+				            </td> 
+							
+				        </tr>
+
+
+						{# SAMEDI MATIN#}
+
+						<tr class="">
+
+							<th>Samedi :</th>
+
+							<td>
+
+						{% if openDay.getOpenDay.saturdayAmBegin is not null %}
+
+								 {{ openDay.getOpenDay.saturdayAmBegin|date("H:i")}} - {{ openDay.getOpenDay.saturdayAmFinish|date("H:i")}}
+
+							{% else %}
+
+								Fermé
+
+							{% endif %}
+
+				            </td> 
+
+
+							{# SAMEDI APRES-MIDI#}
+
+							<td>
+
+						{% if openDay.getOpenDay.saturdayPmBegin is not null %}
+
+								 {{ openDay.getOpenDay.saturdayPmBegin|date("H:i")}} - {{ openDay.getOpenDay.saturdayPmFinish|date("H:i")}}
+
+							{% else %}
+
+								Fermé
+
+							{% endif %}
+
+				            </td> 
+							
+				        </tr>
+
+
+						{# DIMANCHE MATIN#}	
+
+						<tr class="">
+
+							<th>Dimanche :</th>
+
+							<td>
+
+						{% if openDay.getOpenDay.sundayAmBegin is not null %}
+
+								 {{ openDay.getOpenDay.sundayAmBegin|date("H:i")}} - {{ openDay.getOpenDay.sundayAmFinish|date("H:i")}}
+
+							{% else %}
+
+								Fermé
+
+							{% endif %}
+
+				            </td> 
+
+
+							{# DIMANCHE APRES-MIDI#}
+
+							<td>
+
+						{% if openDay.getOpenDay.sundayPmBegin is not null %}
+
+								 {{ openDay.getOpenDay.sundayPmBegin|date("H:i")}} - {{ openDay.getOpenDay.sundayPmFinish|date("H:i")}}
+
+							{% else %}
+
+								Fermé
+
+							{% endif %}
+
+				            </td> 
+							
+				        </tr>
+
+
+			</table> 
+		{% endif %}
+
+		</div>
+
+		<div class="col-12 col-lg-4 text-black">
+			<p class="fs-5 text-black adresse">
+				Adresse: 1 rue de la paix,
+				30100 Ales
+			</p>
+
+			<p class="fs-5 text-black num">
+				Numéro: 06 06 06 06 06
+			</p>
+
+			<p class="fs-5 text-black formulaire">
+				<a class="knowMoreFooter" href="{{path('app_contact_us')}}">Formulaire de contact</a>
+			</p>
+
+		</div>
+
+		<div class="col-12 col-lg-4 text-black">
+			<div class="row">
+				<div class="col-12 col-lg-12 fs-5 text-black legal">
+					<a class="knowMoreFooter" href="{{path('app_legal_notice')}}">Mentions Légales</a>
+				</div>
+				<div class="col-12 col-lg-12 fs-5 text-black politique">
+					<a class="knowMoreFooter" href="{{path('app_privacy_policy')}}">Politique de Confidentialité</a>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+	<div class="row mt-5 m-0">
+		<div class="col-12 text-black">
+			<p class="fs-6 text-black">© 2024 - Tous droits réservés</p>
+		</div>
+  
+</footer>

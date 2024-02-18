@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Privacy Policy{% endblock %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset('css/legalAndPrivacy.css') }}">
+{% endblock %}
+
+{% block body %}
+    <br>
+    <h1 class="text-center">Politique de confidentialité</h1>
+<br>
+<br>
+
+{% if privacyPolicy.description is defined %}
+
+    <div> {{privacyPolicy.description}} </div>
+	<br>
+
+{% else %}
+
+    <div class="col-11 mt-3 mb-3 border border-3 border-black bgNoLegalAndPrivacy">
+		<div class=" text-center rounded-1" role="alert">
+			<p>La politique de confidentialité n'est pas encore définie.</p>
+
+		</div>
+	</div>
+
+{% endif %}
+
+
+{% endblock %}
+
+
+
+
+    

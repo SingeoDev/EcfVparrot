@@ -1,0 +1,83 @@
+  
+  .textComment {
+    font-size: 18px;
+  }
+  
+  
+  .knowMore {
+    text-decoration: none;
+    text-decoration: underline;
+    color: #002BC6;
+    font-weight: 450;
+  }
+  
+  .knowMore:hover {
+    color: #FFFB32;
+  }
+
+  
+  .writeComment {
+    margin-top: 15px;  
+    margin-bottom: 25px;
+  }
+
+  .bgComment {
+    background-color: #0BACCC;
+  }
+
+  .bgNoComment {
+    background-color: #0BACCC;
+  }
+
+  .modal-content {
+    width: 90vw;
+    background-color: transparent;
+  }
+  
+  .modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-body {
+    background-color: #0BACCC;
+  }
+  
+  .modal {  
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+
+
+  .etoileComment {
+    margin-top: -5px;
+    margin-left: 3px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .etoileCommentchoice {
+    width: 38px;
+    height: 38px;
+  }
+
+  .commentName {
+    margin-top: 10px;
+  }
+
+  .submit {
+    margin-left: 50px;
+  }
+
+  .closeBackDrop {
+    margin-left: 730px;
+    margin-bottom: 10px;
+  }
+
+  .btnCancel {
+    color: #ff0000;
+  }
+  
+  .btnCancel:hover {
+    background-color: #ff0000;
+  }  

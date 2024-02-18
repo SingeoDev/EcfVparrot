@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Legal Notice{% endblock %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset('css/legalAndPrivacy.css') }}">
+{% endblock %}
+
+{% block body %}
+
+<br>
+    <h1 class="text-center">Mentions Légales</h1>
+<br>
+<br>
+
+{% if legalNotice.description is defined %}
+
+     <div> {{legalNotice.description}} </div>
+	 <br>
+
+{% else %}
+
+<div class="col-11 mt-3 mb-3 border border-3 border-black bgNoLegalAndPrivacy">
+		<div class=" text-center rounded-1" role="alert">
+			<p>Les mentions légales ne sont pas encore définies.</p>
+
+		</div>
+	</div>
+
+{% endif %}
+    
+{% endblock %}

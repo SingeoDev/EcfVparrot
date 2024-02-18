@@ -1,0 +1,69 @@
+{% if comments|length == 0 %}
+
+<div class="row justify-content-center mt-5">
+	<div class="col-11 mt-3 mb-3 border border-3 border-black bgNoComment">
+		<div class="text-center rounded-1">
+
+			<p class="fs-3">Il n'y a pas de commentaire</p>
+			
+			<p class="fs-4"><B>Vous pouvez être le premier a écrire un commentaire !</B></p>
+
+		</div>
+	</div>
+</div>
+
+{% else %}
+
+	{% for comment in comments %}
+		<div class="col-10 mt-3 mb-3 border border-3 border-black bgComment">
+			<h5 class="fs-6 text-uppercase mb-1 fw-bold float-start commentName">
+				{{ comment.name }}
+
+				{% if comment.stars == 1 %}
+
+					<img src="{{ asset('images/etoilesvote.png') }}" alt="etoile" class="etoileComment">
+					<img src="{{ asset('images/etoilesnonvote.png') }}" alt="etoile" class="etoileComment">
+					<img src="{{ asset('images/etoilesnonvote.png') }}" alt="etoile" class="etoileComment">
+					<img src="{{ asset('images/etoilesnonvote.png') }}" alt="etoile" class="etoileComment">
+					<img src="{{ asset('images/etoilesnonvote.png') }}" alt="etoile" class="etoileComment">
+
+				{% elseif comment.stars == 2 %}
+
+					<img src="{{ asset('images/etoilesvote.png') }}" alt="etoile" class="etoileComment">
+					<img src="{{ asset('images/etoilesvote.png') }}" alt="etoile" class="etoileComment">
+					<img src="{{ asset('images/etoilesnonvote.png') }}" alt="etoile" class="etoileComment">
+					<img src="{{ asset('images/etoilesnonvote.png') }}" alt="etoile" class="etoileComment">
+					<img src="{{ asset('images/etoilesnonvote.png') }}" alt="etoile" class="etoileComment">
+
+				{% elseif comment.stars == 3 %}
+
+					<img src="{{ asset('images/etoilesvote.png') }}" alt="etoile" class="etoileComment">
+					<img src="{{ asset('images/etoilesvote.png') }}" alt="etoile" class="etoileComment">
+					<img src="{{ asset('images/etoilesvote.png') }}" alt="etoile" class="etoileComment">
+					<img src="{{ asset('images/etoilesnonvote.png') }}" alt="etoile" class="etoileComment">
+					<img src="{{ asset('images/etoilesnonvote.png') }}" alt="etoile" class="etoileComment">
+
+				{% elseif comment.stars == 4 %}
+
+					<img src="{{ asset('images/etoilesvote.png') }}" alt="etoile" class="etoileComment">
+					<img src="{{ asset('images/etoilesvote.png') }}" alt="etoile" class="etoileComment">
+					<img src="{{ asset('images/etoilesvote.png') }}" alt="etoile" class="etoileComment">
+					<img src="{{ asset('images/etoilesvote.png') }}" alt="etoile" class="etoileComment">
+					<img src="{{ asset('images/etoilesnonvote.png') }}" alt="etoile" class="etoileComment">
+
+				{% elseif comment.stars == 5 %}
+
+					<img src="{{ asset('images/etoilesvote.png') }}" alt="etoile" class="etoileComment">
+					<img src="{{ asset('images/etoilesvote.png') }}" alt="etoile" class="etoileComment">
+					<img src="{{ asset('images/etoilesvote.png') }}" alt="etoile" class="etoileComment">
+					<img src="{{ asset('images/etoilesvote.png') }}" alt="etoile" class="etoileComment">
+					<img src="{{ asset('images/etoilesvote.png') }}" alt="etoile" class="etoileComment">
+
+				{% endif %}
+			</h5>
+			<br>
+			<p class="textComment text-start">{{ comment.message }}</p>
+		</div>
+	{% endfor %}
+
+{% endif %}

@@ -1,0 +1,112 @@
+{# PAGE AFFICHER APRES CLIC VOIR VEHICULE #}
+
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Vehicules{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/viewvehicles.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+{% endblock %}
+
+
+{% block body %}
+<div class="col-12">
+
+<div class="row justify-content-center">
+	<div class="imgPrincipal ">
+		<div class="imageview border border-black border-3 rounded-1">
+			<div class="col-12 align-self-center p-1 viewimage rounded-1" style="background-image: url('{{ asset('images/imagesVehicles/' ~ vehicle.imageName) }}')">
+				<div class="viewImgClick " data-bs-toggle="modal" data-bs-target="#viewImgPrincipal"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+	<div class="row justify-content-center">
+	{% for imgGall in vehicle.imageGalleries %}
+
+	<div class="img">
+		<div class="imageview border border-black border-3 rounded-1">
+			<div class="col-3 p-1 viewimage" style="background-image: url('{{ asset('images/imagesVehicles/' ~ imgGall.imageName) }}')">
+				<div class="viewImgClick" data-bs-toggle="modal" data-bs-target="#viewImgGallery"></div>
+			</div>
+		</div>
+	</div>
+
+	{% endfor %}
+    </div>
+
+      
+
+<!-- click on the principal image -->
+
+<div class="modal fade" id="viewImgPrincipal" tabindex="-1" aria-labelledby="showBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+
+				<button type="button" class="btn btnCancel border border-3 border-black closeImgGallery" data-bs-dismiss="modal" aria-label="Close">
+					<img src="{{ asset('images/cross.png') }}" alt="close" class="close" width="50px" height="50px">
+				</button>
+
+			</div>
+
+			<div class="colorBgImgGallery">
+	
+						<div class="">
+							<img src="{{ asset('images/imagesVehicles/' ~ vehicle.imageName) }}" class="d-block w-100" alt="{{vehicle.imageName}}">	
+						</div>
+						
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- click on image Gallery -->
+
+<div class="modal fade" id="viewImgGallery" tabindex="-1" aria-labelledby="showBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+
+				<button type="button" class="btn text-end btnCancel border border-3 border-black closeImgGallery" data-bs-dismiss="modal" aria-label="Close">
+					<img src="{{ asset('images/cross.png') }}" alt="close" class="close" width="50px" height="50px">
+				</button>
+
+			</div>
+
+			<div class="colorBgImgGallery">
+						
+						{% for imgGall in vehicle.imageGalleries %}
+						{% if imgGall.imageName %}
+							<div class="">
+								<img src="{{ asset('images/imagesVehicles/' ~ imgGall.imageName) }}" class="d-block w-100" alt="{{imgGall.imageName}}">
+							</div>
+						{% endif %}
+						{% endfor %}	
+						
+			</div>
+		</div>
+	</div>
+</div>
+
+ 
+<div class="col-12">
+            
+			{% include "vehicles/viewDetailsVehicle.html.twig" %}
+			
+			
+</div>
+</div>
+
+
+<script src="{{ asset('js/contactAbout.js') }}"></script>
+    
+{% endblock %}

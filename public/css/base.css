@@ -1,0 +1,138 @@
+
+/* Dans votre fichier CSS (par exemple public/css/styles.css) */
+@font-face {
+    font-family: 'Comic Sans MS';
+     src:    url('../fonts/comicSansMS.woff') format('woff');
+  }
+  
+  /* Utilisation de la police dans votre application */
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    font-size: 30px;
+    color: #000000;
+    background-color: #8d8d8d;
+}
+
+.menuButton {
+    background-color: #0BACCC;
+}
+
+.menuButton2 {
+    margin-top: 1px;
+    margin-bottom: 5px;
+}
+
+.btn {
+   background-color: #E5E3B4;
+
+}  
+
+.btn:hover {
+    background-color: #FFFB32;
+} 
+
+
+.menuButtonconnexion {
+    margin-top: -20px;
+    margin-bottom: -25px;
+}
+
+
+
+/* footer */
+.footer {
+    background-color: #E5E3B4;
+}
+
+.tableOpenDay {
+    margin-top: 10px;
+}
+
+.horaires {
+    margin-top: 10px;
+}
+
+.adresse {
+    margin-top: 35px;
+}
+
+.num {
+    margin-top: 70px;
+}
+
+.formulaire {
+    margin-top: 70px;
+}
+
+.legal {
+    margin-top: 135px;
+}
+
+.politique {
+    margin-top: 70px;
+}
+
+
+.logoHeader {
+    margin-bottom: 3px;
+}
+
+
+  
+@media screen and (max-width: 1552px){
+
+  
+    .menuButton2 {
+        display: none;
+    }
+
+    .menuButtonconnexion {
+        display: none;
+    }
+
+    .menuButtonTel{
+    display: visible;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    }
+
+    .menuButtonconnexionTel{
+    display: visible;
+    margin-bottom: 1px;
+    }
+
+}
+  
+@media screen and (min-width: 1552px) {
+
+    .menuButtonTel{
+        display: none;
+    }
+
+    .menuButtonconnexionTel{
+        display: none;
+    }
+  
+}
+
+.menuButtonconnexionTel {
+    margin-top: -20px;
+    margin-bottom: -25px;
+}
+
+
+.knowMoreFooter {
+    text-decoration: none;
+    text-decoration: underline;
+    color: #002BC6;
+    font-weight: 450;
+}
+  
+.knowMoreFooter:hover {
+    color: #2A8C23;
+}
+
+
+.tableOpenDay{
+    border-collapse: separate;
+}

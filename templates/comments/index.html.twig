@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Commentaires{% endblock %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset('css/comment.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+{% endblock %}
+
+{% block body %}
+<br>
+        <div class="col-12 text-center">
+            <div 
+				<a class="btn fs-4 border border-3 border-black writeComment" data-bs-toggle="modal" data-bs-target="#BtnWriteComment"><B>Ecrire un commentaire</B></a>
+			</div>
+        </div>
+
+        <div class="modal fade" id="BtnWriteComment" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body" id="modalForm">
+                        {% include 'comments/form.html.twig' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div id="content" class="row justify-content-evenly mb-4 ms-0 me-0">
+        {% include 'comments/viewcomments.html.twig' %}
+    </div>
+    <script src="{{ asset('js/comment.js') }}"></script>
+{% endblock %}
+

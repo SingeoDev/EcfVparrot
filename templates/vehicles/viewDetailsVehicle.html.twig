@@ -1,0 +1,96 @@
+<!-- description/option/contact us about a vehicle -->
+
+<div
+	class="col-12 col-lg-10 container-fluid text-center border border-3 mt-3 mb-4 border-black colorBodyDescription">
+
+
+        <div class="row">
+			
+            <div class="col-6 fs-5 text-start text-uppercase text-decoration-underline">
+				<p><B>{{ vehicle.name }}</B></p>
+			</div>
+            
+            <div class="col-6 text-end">
+			    <a class="btn fs-5 border border-3 mt-2 border-black contactAbout" data-bs-toggle="modal" data-bs-target="#contactAboutVehicle" style="color: #002BC6;"><B>CONTACT</B></a>
+            </div>
+        
+		</div>   
+
+
+     	<div class="row">
+			
+            <div class="col-6 fs-6 text-start">
+				<p>Année &nbsp;{{vehicle.years|date("m-Y")}}</p>
+			</div>
+        
+		</div>   
+
+
+	<div class="row">
+		
+        <div class="col-6 fs-6 text-start">
+			<p>{{vehicle.mileage}} Km</p>
+		</div>
+
+	</div>
+
+
+        <div class="row">
+			
+            <div class="col-6 fs-6 text-start">
+				<p>{{vehicle.gearbox}}</p>
+			</div>
+
+		</div>
+
+
+		<div class="row">
+			
+            <div class="col-6 fs-6 text-start">
+				<p>{{vehicle.fuel}}</p>
+			</div>
+
+		</div>
+        
+
+		<div class="row">
+			
+            <div class="col-6 fs-5 fw-bold text-start textcolorPrice">
+				<p>PRIX : {{vehicle.price}} €</p>
+			</div>
+
+		</div>
+
+    <br>
+		<div class="row">
+			
+			 <div class="col-12 fs-5 text-start">
+				<p><U><B> OPTIONS </B></U> : </p> 
+			</div>
+
+			{% for opt in vehicle.options %}
+				<div class="col-12 fs-6 text-start">
+					<p>{{ opt.options }}</p>
+				</div>
+			{% endfor %}
+		</div>	
+
+</div>
+
+
+	
+{# click on contact button to open the modal form #}
+
+	<div class="modal fade" id="contactAboutVehicle" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-body" id="pageContain">
+					{% include 'vehicles/contactAboutVehicle.html.twig' %}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+
+

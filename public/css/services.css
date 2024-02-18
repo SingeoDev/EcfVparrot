@@ -1,0 +1,35 @@
+
+.banniere {
+    background-color: #E5E3B4;
+    margin-top: -25px;
+}
+
+.imagebanniere {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 90%;
+    max-height: 270px;
+}
+
+
+.textColorPrice {
+  color: #FFFB32;
+}
+
+
+.bgServices {
+  background-color: #0BACCC;
+  margin-top: 35px;
+}
+
+.logoServices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+
+.bgNoServices {
+  background-color: #0BACCC;
+}

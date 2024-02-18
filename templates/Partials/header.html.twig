@@ -1,0 +1,107 @@
+{# LOGO HEADER #}
+
+<div class="container-fluid text-center">
+
+	<div class="row">
+		<div class="col-12">
+			<img src="{{ asset('images/logogaragevparrot.png' )}}" width="250px" height="160px">
+		</div>
+	</div>
+
+
+	{# MENU BUTTONS #}
+
+	<div class="row justify-content-center">
+		<div class="col-11 align-self-center border border-3 border-black menuButton">
+			<div class="row justify-content-center">
+
+				{# Home pc #}
+				<div class="col-2 menuButton2">
+
+					<a class="btn border border-3 border-black" href="{{path('app_home')}}"><B>ACCEUIL</B>
+					<img class="logoHeader" src="{{ asset('images/logohome.png' )}}" width="26px">
+					</a>
+
+				</div>
+				
+				{# Home tel #}
+				<div class="col-2 menuButtonTel">
+
+					<a class="" href="{{path('app_home')}}">
+						<img src="{{ asset('images/logohome.png' )}}" width="50px">
+					</a>
+				
+				</div>
+
+				{# Vehicles pc #}
+				<div class="col-2 menuButton2">
+					<a class="btn border border-3 border-black" href="{{path('app_vehicles')}}"><B>NOS VEHICULES</B>
+					<img class="logoHeader" src="{{ asset('images/logovehicule.png' )}}" width="30px">
+					</a>
+				</div>
+
+				{# Vehicles tel #}
+				<div class="col-2 menuButtonTel">
+
+					<a class="" href="{{path('app_vehicles')}}">
+						<img src="{{ asset('images/logovehicule.png' )}}" width="50px">
+					</a>
+				
+				</div>
+
+				{# commentaire pc #}
+				<div class="col-2 menuButton2">
+					<a class="btn border border-3 border-black" href="{{path('app_comments')}}"><B>COMMENTAIRES</B>
+					<img class="logoHeader" src="{{ asset('images/logocommentaire.png' )}}" width="26px">
+					</a>
+				</div>
+
+				{# commentaire tel #}
+				<div class="col-2 menuButtonTel">
+
+					<a class="" href="{{path('app_comments')}}">
+						<img src="{{ asset('images/logocommentaire.png' )}}" width="50px">
+					</a>
+				
+				</div>
+
+				{# contact pc #}
+				<div class="col-2 menuButton2">
+					<a class="btn border border-3 border-black" href="{{path('app_contact_us')}}"><B>CONTACTEZ-NOUS</B>
+					<img class="logoHeader" src="{{ asset('images/logocontact.png' )}}" width="26px" height="26px" >
+					</a>
+					
+				</div>
+
+				{# contact tel #}
+				<div class="col-2 menuButtonTel">
+
+					<a class="" href="{{path('app_contact_us')}}">
+						<img src="{{ asset('images/logocontact.png' )}}" width="50px">
+					</a>
+				
+				</div>
+
+				{# connexion pc #}
+				<div class="col-2  menuButtonconnexion ">
+				
+					<a class="" href="{{path('app_login')}}">
+						<img class="btnConnexionColor" src="{{ asset('images/cleConnexion.png' )}}" width="140px">
+					</a>
+					
+				</div>
+
+				{# connexion tel #}
+				<div class="col-2 menuButtonconnexionTel">
+
+					<a class="" href="{{path('app_login')}}">
+						<img src="{{ asset('images/cleConnexion.png' )}}" width="140px">
+					</a>
+				
+				</div>
+
+				
+			</div>
+		</div>
+	</div>
+</div>

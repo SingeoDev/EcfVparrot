@@ -1,0 +1,139 @@
+
+.modal-content {
+  width: 90vw;
+  background-color: transparent;
+}
+
+
+.modal-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {  
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-body {
+  background-color: #0BACCC;
+}
+
+.colorBgImgGallery {
+  background-color: #ffffff;
+}
+
+
+.nameVehicle {
+  background-color: #E5E3B4;
+  text-align: end;
+}
+
+.closeImgGallery {
+  margin-left: 700px;
+  margin-bottom: 10px;
+  /* justify-content: center; */
+  /* align-items: end; */
+
+}
+
+.closeContactAbout {
+  margin-left: 730px;
+  margin-bottom: 10px;
+}
+
+.knowMore:hover {
+  color: #FFFB32;
+}
+
+
+.colorBodyDescription {
+  background-color: #0BACCC;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.année {
+  margin-top: -2px;
+}
+
+
+.textcolorPrice {
+  color: #FFFB32;
+}
+
+
+.submitContact {
+  margin-left: 50px;
+}
+
+
+.btnCancel {
+color: #ff0000;
+}
+
+.btnCancel:hover {
+background-color: #ff0000;
+}  
+
+
+.imgPrincipal {
+    position: relative;
+    width: 35%;
+    padding-top: 27%;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .img {
+    position: relative;
+    width: 8%;
+    padding-top: 8%;
+    margin: 0.4%;
+  }
+  
+  .viewimage {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ffffff;
+  
+  }
+  
+  .viewImgClick {
+    display: none;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    color: #ffffff !important;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    height: 100%;
+    padding-top: 25%;
+  }
+  
+
+  .imageview {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  .imageview:hover .viewImgClick {
+    display: block;
+    }
+    
+
